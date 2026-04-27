@@ -44,6 +44,7 @@ gem "net-http-persistent"
 gem "kredis"
 gem "platform_agent"
 gem "thruster"
+gem 'kamal', '~> 2.11'
 
 group :development, :test do
   gem "debug"

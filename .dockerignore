@@ -35,15 +35,24 @@
 /bin/deploy
 /bin/deploy-*
 /bin/release
+/.kamal
 
-# Ignore master.key (should be set in environment)
+# Ignore all default key files.
 /config/master.key
+/config/credentials/*.key
 
 # Ignore editor noise
 /.vscode
 
-# Ignore ignore
-.dockerignore
+# Ignore development files
+/.devcontainer
+
+# Ignore Docker-related files
+/.dockerignore
+/Dockerfile*
+
+# Ignore CI service files.
+/.github
 
 # Don't include our README
 /README.md
