@@ -1,6 +1,6 @@
 class FirstRun
-  ACCOUNT_NAME = "Campfire"
-  FIRST_ROOM_NAME = "All Talk"
+  ACCOUNT_NAME = "Fathom Chat"
+  FIRST_ROOM_NAME = "Welcome to Fathom Chat"
 
   def self.create!(user_params)
     account = Account.create!(name: ACCOUNT_NAME)
