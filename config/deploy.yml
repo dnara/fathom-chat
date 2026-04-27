@@ -5,8 +5,9 @@ servers:
   web:
     hosts:
       - 45.32.115.150
-    volumes:
-      - fathom-chat-storage:/rails/storage
+
+volumes:
+  - fathom-chat-storage:/rails/storage
 
 accessories:
   redis:
