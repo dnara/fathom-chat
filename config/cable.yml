@@ -15,4 +15,5 @@ performance:
 
 production:
   <<: *default
+  url: redis://fathom-chat-redis:6379/0
   channel_prefix: fathom_chat_production
