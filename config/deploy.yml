@@ -8,6 +8,12 @@ servers:
 volumes:
   - fathom-chat-storage:/rails/storage
 
+proxy:
+  ssl:
+    certificate_pem: SSL_CERTIFICATE_PEM
+    private_key_pem: SSL_PRIVATE_KEY_PEM
+  host: www.fathom-chat.work
+
 accessories:
   redis:
     image: redis:7-alpine
@@ -28,7 +34,6 @@ registry:
 env:
   secret:
     - RAILS_MASTER_KEY
-    - REDIS_PASSWORD
     - REDIS_URL
   clear:
     RAILS_LOG_LEVEL: error
