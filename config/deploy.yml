@@ -9,10 +9,8 @@ volumes:
   - fathom-chat-storage:/rails/storage
 
 proxy:
-  ssl:
-    certificate_pem: SSL_CERTIFICATE_PEM
-    private_key_pem: SSL_PRIVATE_KEY_PEM
-  host: www.fathom-chat.work
+  ssl: true
+  host: fathom-chat.work
 
 accessories:
   redis:
