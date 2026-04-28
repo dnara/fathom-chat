@@ -13,7 +13,7 @@ accessories:
     image: redis:7-alpine
     host: 45.32.115.150
     port: "127.0.0.1:6379:6379"
-    cmd: redis-server
+    cmd: "redis-server --requirepass ${REDIS_PASSWORD}"
     volumes:
       - redis_data:/data
 
@@ -25,6 +25,7 @@ registry:
 env:
   secret:
     - RAILS_MASTER_KEY
+    - REDIS_PASSWORD
     - REDIS_URL
   clear:
     RAILS_LOG_LEVEL: error
