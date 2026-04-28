@@ -16,6 +16,9 @@ accessories:
     cmd: "redis-server --requirepass ${REDIS_PASSWORD}"
     volumes:
       - redis_data:/data
+    env:
+      secret:
+        - REDIS_PASSWORD
 
 registry:
   username: 3dnara
