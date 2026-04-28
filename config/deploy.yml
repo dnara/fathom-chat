@@ -35,6 +35,8 @@ env:
   secret:
     - RAILS_MASTER_KEY
     - REDIS_URL
+    - CLOUDFLARE_ORIGIN_CERT
+    - CLOUDFLARE_ORIGIN_KEY
   clear:
     RAILS_LOG_LEVEL: error
 
