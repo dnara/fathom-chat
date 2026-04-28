@@ -9,7 +9,9 @@ volumes:
   - fathom-chat-storage:/rails/storage
 
 proxy:
-  ssl: true
+  ssl:
+    certificate_pem: CLOUDFLARE_ORIGIN_CERT
+    private_key_pem: CLOUDFLARE_ORIGIN_KEY
   host: fathom-chat.work
 
 accessories:
