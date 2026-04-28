@@ -40,6 +40,8 @@
 # Ignore all default key files.
 /config/master.key
 /config/credentials/*.key
+/.secrets
+*.pem
 
 # Ignore editor noise
 /.vscode
