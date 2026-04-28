@@ -15,5 +15,5 @@ performance:
 
 production:
   <<: *default
-  url: redis://fathom-chat-redis:6379/0
+  url: <%= Rails.application.credentials.dig(:redis, :url) %>
   channel_prefix: fathom_chat_production
