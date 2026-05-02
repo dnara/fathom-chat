@@ -17,13 +17,9 @@ accessories:
     image: redis:7-alpine
     host: 45.32.115.150
     port: "127.0.0.1:6379:6379"
-    cmd: 'redis-server --requirepass "${REDIS_PASSWORD}"'
+    cmd: redis-server
     volumes:
       - redis_data:/data
-    env:
-      secret:
-        - REDIS_PASSWORD
-        - REDIS_URL
 
 registry:
   username: 3dnara
@@ -35,6 +31,7 @@ env:
     - RAILS_MASTER_KEY
   clear:
     RAILS_LOG_LEVEL: error
+    REDIS_URL: redis://fathom-chat-redis:6379
 
 aliases:
   console: app exec --interactive --reuse "bin/rails console"
