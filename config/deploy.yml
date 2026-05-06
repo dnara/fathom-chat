@@ -10,7 +10,9 @@ volumes:
 
 proxy:
   ssl: true
-  host: fathom-chat.work
+  hosts:
+  - fathom-chat.work
+  - www.fathom-chat.work
 
 accessories:
   redis:
